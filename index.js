@@ -13,7 +13,8 @@ const gridSize = document.querySelector(".columns");
 const startButton = document.querySelector(".start");
 const clearButton = document.querySelector(".clear");
 const randomButton = document.querySelector(".random");
-const generation = document.querySelector(".generation")
+const resetButton = document.querySelector(".reset");
+const generation = document.querySelector(".generation");
 
 gridSize.innerHTML = slider.value;
 
@@ -27,11 +28,12 @@ slider.oninput = function () {
   generateTable();
 };
 
-slider.addEventListener("input", function () {
+//Function that change the range of the green color in the slider
+function sliderColorEfect() {
   let x = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
   let color = `linear-gradient(90deg, rgb(117,252,117) ${x}%, rgb(214,214,214) ${x}%)`;
   slider.style.background = color;
-});
+}
 
 generateTable();
 
@@ -133,9 +135,10 @@ function updateStatus() {
       }
     }
   }
+
+  //Generation count
   currentGeneration += 1;
   generation.innerHTML = currentGeneration;
-  console.log(generation);
 }
 
 //Function that makes the grid and buttons clickable or not.
@@ -171,12 +174,17 @@ function startGameButton() {
     //If you are playing when you press the button, the game is paused.
     playing = false;
     startButton.textContent = "Resume";
+    //Show the reset button when the game is in pause
+    resetButton.style.display = "block";
   } else {
     //In case you press the button and you are not playing, the game is resumed.
     playing = true;
     startButton.textContent = "Pause";
     start(); //Call the function that keeps the game running.
     noClick(); //Call the function that makes the grid unclickable or clickable.
+
+    //hide the reset button when the game is running
+    resetButton.style.display = "none";
   }
 }
 
@@ -209,6 +217,24 @@ function randomPatternButton() {
   }
 }
 
+//Function that reset the game to the initial state
+function resetGameButton() {
+  clearGameButton();
+  playing = false;
+  statusClick = true;
+  currentGeneration = 0;
+  generation.innerHTML = currentGeneration;
+  slider.value = 30;
+  gridSize.innerHTML = slider.value;
+  startButton.textContent = "Start Game";
+  slider.oninput();
+  sliderColorEfect();
+  noClick();
+  resetButton.style.display = "none";
+}
+
 startButton.addEventListener("click", startGameButton); //Start Button Event Listener.
 clearButton.addEventListener("click", clearGameButton); //Clear Button Event Listener.
 randomButton.addEventListener("click", randomPatternButton); //Random Button Event Listener
+resetButton.addEventListener("click", resetGameButton); //Reset Button Event Listener
+slider.addEventListener("input", sliderColorEfect); //Change the range of the green color in the slider

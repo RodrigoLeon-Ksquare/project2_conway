@@ -1,72 +1,85 @@
-body{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 15px;
-    height: 100vh;
-    margin: 0px;
-    background-color: rgb(241, 230, 222);
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 15px;
+  height: 100vh;
+  margin: 0px;
+  background-color: rgb(241, 230, 222);
 }
 
-td{
-    border: black solid 1px;
+td {
+  border: black solid 1px;
 }
 
-.controlContainer{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-left: 30px;
+.controlContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 30px;
 }
 
-.tableContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
+.tableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
 }
 
-.sliderContainer{
-    display: inline-block;
+.sliderContainer {
+  display: inline-block;
 }
 
-.slider{
-    -webkit-appearance: none;
-    background: linear-gradient(90deg, rgb(117,272,117) 45%, rgb(214,214,214) 45%);
-    width: 60%;
-    height: 10px;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-    border-radius: 12px;
+.slider {
+  -webkit-appearance: none;
+  background: linear-gradient(
+    90deg,
+    rgb(117, 272, 117) 45%,
+    rgb(214, 214, 214) 45%
+  );
+  width: 60%;
+  height: 10px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 12px;
 }
 
-.buttonContainer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
-button{
-    font-weight: bold;
-    width: 120px;
-    padding: .75em;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+.reset {
+  display: none;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: rgb(83, 128, 131);
+button {
+  font-weight: bold;
+  width: 120px;
+  padding: 0.75em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(83, 128, 131);
 }
 
 .unclickable {
-    pointer-events: none;
+  pointer-events: none;
 }
 
-.infoStyle{font-weight: bolder;}
-.generation, .columns{font-weight: 100;}
+.infoStyle {
+  font-weight: bolder;
+}
+.generation,
+.columns {
+  font-weight: 100;
+}
