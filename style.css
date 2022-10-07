@@ -1,3 +1,5 @@
+/*For the CSS with follow the recomendation to use the lowest specificity*/
+/*Style for the body*/
 body {
   display: flex;
   align-items: center;
@@ -9,10 +11,12 @@ body {
   background-color: rgb(241, 230, 222);
 }
 
+/*Style for the cell*/
 td {
   border: black solid 1px;
 }
 
+/*Style for the user control section*/
 .controlContainer {
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@ td {
   margin-left: 30px;
 }
 
+/*Style for the grid*/
 .tableContainer {
   display: flex;
   align-items: center;
@@ -27,10 +32,12 @@ td {
   width: 70%;
 }
 
+/*Styles for the slider section*/
 .sliderContainer {
   display: inline-block;
 }
 
+/*Style for the slider element*/
 .slider {
   -webkit-appearance: none;
   background: linear-gradient(
@@ -47,6 +54,7 @@ td {
   border-radius: 12px;
 }
 
+/*Styles for the button section*/
 .buttonContainer {
   display: flex;
   flex-direction: column;
@@ -55,10 +63,12 @@ td {
   align-content: space-between;
 }
 
+/*Style for hide the reset button when game start*/
 .reset {
   display: none;
 }
 
+/*Style for each button*/
 button {
   font-weight: bold;
   width: 120px;
@@ -67,11 +77,13 @@ button {
   border-radius: 5px;
 }
 
+/*Style when you pass the mouse over the buttons*/
 button:hover {
   cursor: pointer;
   background-color: rgb(83, 128, 131);
 }
 
+/*Style for block the grid and buttons when the game start*/
 .unclickable {
   pointer-events: none;
 }
@@ -79,6 +91,8 @@ button:hover {
 .infoStyle {
   font-weight: bolder;
 }
+
+/*Style for text size*/
 .generation,
 .columns {
   font-weight: 100;
