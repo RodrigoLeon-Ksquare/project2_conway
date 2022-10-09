@@ -13,7 +13,7 @@ Welcome! This repo contains the code for the Conmay's Game of Life proyect. Here
 ## Assignation 
 
 | User Stories     | Rodrigo León | Junior Cabrera | Rodrigo García |
-| ---------------- | :---: | :---: | :---: | :---: |
+| ---------------- | :---: | :---: | :---: |
 | 1. As a user, whenever I navigate to the website and see an empty grid with the option to let the user set up the initial configuration. |  X   |      |      |  
 | 2. If the game is paused I can resume it. |     |   X   |      |
 | 3. I can clear the board. |      |   X   |      |
