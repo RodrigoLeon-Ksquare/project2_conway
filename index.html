@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Coneway home</title>
+        
+    </head>
+
+    <body>
+        <!--Start user control-->
+        <section class="controlContainer">
+            <!--Start button container-->
+            <div class="buttonContainer">
+                <button type="button" class="start">Start Game</button>
+                <button type="button" class="clear">Clear</button>
+                <button type="button" class="random">Random</button>
+                <button type="button" class="reset">Reset</button>
+            </div>
+            <!--End button container-->
+             
+            <!--Start info section-->
+            <div>
+                <p class="infoStyle">Current generation: <span class="generation">0</span></p>
+            </div>
+            <!--End info section-->
+
+            <!--Start slider element-->
+            <div class="sliderContainer">
+                <div class="sliderContainer_columns infoStyle">
+                    <p>
+                        <p>Grid size: <span class="columns">30</span></p>
+                    </p>
+                    <input type="range" min="5" max="60" value="30" class="slider">
+                </div>
+            </div>
+            <!--End slider element-->
+
+            <!--Start instructions section-->
+            <div class="instructions">
+                <h1>Instructions</h1>
+                <ol>
+                    <li>Select the grid size with the slider element</li>
+                    <li>Create a pattern. You can create manually clicking the cells in the grid or automatically clicking the random button.</li>
+                    <li>Start the game clicking the start game button.</li>
+                    <li>You can pause and continue the game.</li>
+                    <li>You can clear the board if you want clicking the clear button. The cells will change to "dead" status but the game will continue.</li>
+                    <li>If you want to reset the game, first you need to pause it and then you will can reset the game.</li>
+                </ol>
+            </div> 
+            <!--End instructions section--> 
+        </section>
+        <!--End user contol-->
+
+        <!--Grid Container-->
+        <section class="tableContainer"></section>
+    </body>
+    <script src="index.js"></script>
+</html>

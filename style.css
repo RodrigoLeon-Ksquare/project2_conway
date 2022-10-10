@@ -1,0 +1,99 @@
+/*For the CSS with follow the recomendation to use the lowest specificity*/
+/*Style for the body*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 15px;
+  height: 100vh;
+  margin: 0px;
+  background-color: rgb(241, 230, 222);
+}
+
+/*Style for the cell*/
+td {
+  border: black solid 1px;
+}
+
+/*Style for the user control section*/
+.controlContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 30px;
+}
+
+/*Style for the grid*/
+.tableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+/*Styles for the slider section*/
+.sliderContainer {
+  display: inline-block;
+}
+
+/*Style for the slider element*/
+.slider {
+  -webkit-appearance: none;
+  background: linear-gradient(
+    90deg,
+    rgb(117, 272, 117) 45%,
+    rgb(214, 214, 214) 45%
+  );
+  width: 60%;
+  height: 10px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+}
+
+/*Styles for the button section*/
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+/*Style for hide the reset button when game start*/
+.reset {
+  display: none;
+}
+
+/*Style for each button*/
+button {
+  font-weight: bold;
+  width: 120px;
+  padding: 0.75em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+/*Style when you pass the mouse over the buttons*/
+button:hover {
+  cursor: pointer;
+  background-color: rgb(83, 128, 131);
+}
+
+/*Style for block the grid and buttons when the game start*/
+.unclickable {
+  pointer-events: none;
+}
+
+.infoStyle {
+  font-weight: bolder;
+}
+
+/*Style for text size*/
+.generation,
+.columns {
+  font-weight: 100;
+}
